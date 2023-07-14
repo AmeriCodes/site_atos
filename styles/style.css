@@ -1,0 +1,104 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Josefin+Sans&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+@media (max-width: 600px) {
+    .hide_on_mobile {
+        display: none;
+    }
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    height: 100vh;
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: black;
+    background-image: url(../images/fita_peq.jpg);
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+audio {
+    /* Estilos para o elemento de áudio */
+    background-color: #2F3A49;
+    color: #fff;
+    padding: 10px;
+    border-radius: 50px;
+    margin: auto;
+    display: block;
+  }
+  
+  audio::-webkit-media-controls-panel {
+    /* Estilos para o painel de controle no navegador Chrome */
+    background-color: #98AAB6;
+    color: #fff;
+  }
+
+div#atos {
+    background-color: rgba(0, 0, 0, 0.500);
+    color: white;
+    max-width: 580px;
+    margin: 20px 20px 40px 20px;
+    padding: 20px 0px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.37);
+    border-radius: 10px;
+    overflow-x: auto;
+    
+}
+
+h1 {
+    font-family: 'Berkshire swash', serif;
+    font-size: 3em;
+    text-align: center;
+    margin: 20px;
+}
+
+table {
+    margin: auto;
+    border-collapse: collapse;
+    
+}
+
+caption {
+    font-family: 'Open Sans',  'Berkshire Swash', cursive;
+    font-size: 1.6em;
+    font-weight: bolder;
+    padding: 20px;
+}
+
+th {
+    padding: 10px 20px 10px 20px;
+    border: 2px solid white;
+}
+
+td {
+    border: 2px solid white;
+    padding: 10px;
+}
+
+.tom, .link {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: rgba(165, 42, 42);
+}
+
+.song:hover {
+    text-decoration: underline;
+    background-color: #2F3A49;
+}

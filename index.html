@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repertório</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const songs = document.querySelectorAll('td.song');
+            const audioPlayer = document.querySelector('audio');
+            let currentSong = null;
+
+            songs.forEach(function (song) {
+                song.addEventListener('click', function () {
+                    const songName = this.textContent;
+                    const songSource = this.getAttribute('data-src');
+                    
+                    if (currentSong !== null) {
+                        currentSong.classList.remove('playing');
+                        audioPlayer.pause();
+                    }
+                    
+                    audioPlayer.src = songSource;
+                    audioPlayer.play();
+                    
+                    currentSong = this;
+                    currentSong.classList.add('playing');
+                    
+                    console.log('Reproduzindo a música:', songName);
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <main>
+        <h1>Repertoire</h1>
+        <audio preload="none" type="audio/mpeg" controls></audio>
+        <div id="atos">
+            <table>       
+                <caption>ATOS</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col" class="hide_on_mobile">Singer</th>
+                        <th scope="col">Tone</th>
+                        <th scope="col">Youtube</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="song" data-src="songs/128kbps/amor_da_minha_vida.mp3">Amor da minha vida</td>
+                        <td class="hide_on_mobile">Esteves Jascinto</td>
+                        <td class="tom">Cm</td>
+                        <td class="link"><a href="https://www.youtube.com/watch?v=CzpdbAX-J5A" target="_blank">Here</a></td>
+                    </tr>
+                    <tr>
+                        <td class="song" data-src="songs/128kbps/es.mp3">És</td>
+                        <td class="hide_on_mobile">Vitoríno Silva</td>
+                        <td class="tom">Em</td>
+                        <td class="link"><a href="https://www.youtube.com/watch?v=_5CRM78eyUA" target="_blank">Here</a></td>
+                    </tr>
+                    <tr>
+                        <td class="song" data-src="songs/128kbps/pai_eu_confiarei.mp3">Pai eu confiarei</td>
+                        <td class="hide_on_mobile">Bruna Karla</td>
+                        <td class="tom">B</td>
+                        <td class="link"><a href="https://www.youtube.com/watch?v=e8YzUdvZ-3o" target="_blank">Here</a></td>
+                    </tr>
+                    <tr>
+                        <td class="song" data-src="songs/128kbps/fiel_a_mim.mp3">Fiel a mim</td>
+                        <td class="hide_on_mobile">Eyshila</td>
+                        <td class="tom">G</td>
+                        <td class="link"><a href="https://www.youtube.com/watch?v=ifHR8cwNwXw" target="_blank">Here</a></td>
+                    </tr>
+                    <tr>
+                        <td class="song" data-src="songs/128kbps/mar_bravio.mp3">Mar bravio</td>
+                        <td class="hide_on_mobile">Shirley Carvalhaes</td>
+                        <td class="tom">G</td>
+                        <td class="link"><a href="https://www.youtube.com/watch?v=ffXgqltUGsA" target="_blank">Here</a></td>
+                    </tr>
+                    <tr>
+                        <td class="song" data-src="songs/128kbps/eu_vejo_tudo.mp3">Eu vejo tudo</td>
+                        <td class="hide_on_mobile">Rayane Vanessa</td>
+                        <td class="tom">C</td>
+                        <td class="link"><a href="https://www.youtube.com/watch?v=dlDV3gXqqCo" target="_blank">Here</a></td>
+                    </tr>
+                    <tr>
+                        <td class="song" data-src="songs/128kbps/so_jesus_faz.mp3">Só Jesus faz</td>
+                        <td class="hide_on_mobile">Rose Nascimento</td>
+                        <td class="tom">G</td>
+                        <td class="link"><a href="https://www.youtube.com/watch?v=AMamGsC3tZ8" target="_blank">Here</a></td>
+                    </tr>
+                    <tr>
+                        <td class="song" data-src="songs/128kbps/so_vai_ser_alegria.mp3">Só vai ser alegria</td>
+                        <td class="hide_on_mobile">Rose Nascimento</td>
+                        <td class="tom">F#</td>
+                        <td class="link"><a href="https://www.youtube.com/watch?v=iDTJ9_Q04ro" target="_blank">Here</a></td>
+                    </tr>
+                    <tr>
+                        <td class="song" data-src="songs/128kbps/ninguem_pode_impedir.mp3">Ninguém pode impedir</td>
+                        <td class="hide_on_mobile">Rose Nascimento</td>
+                        <td class="tom">B</td>
+                        <td class="link"><a href="https://www.youtube.com/watch?v=pfIJz2z-xZs" target="_blank">Here</a></td>
+                    </tr>
+                    <tr>
+                        <td class="song" data-src="songs/128kbps/tua_presenca.mp3">Tua presença</td>
+                        <td class="hide_on_mobile">Paulo Neto</td>
+                        <td class="tom">Ab</td>
+                        <td class="link"><a href="https://www.youtube.com/watch?v=gs-V3_9eqX8" target="_blank">Here</a></td>
+                    </tr>
+                    <tr>
+                        <td class="song" data-src="songs/128kbps/confidencias.mp3">Condidências</td>
+                        <td class="hide_on_mobile">Ozeias de Paula</td>
+                        <td class="tom">G</td>
+                        <td class="link"><a href="https://www.youtube.com/watch?v=41xoJLQ8i10" target="_blank">Here</a></td>
+                    </tr>
+                    <tr>
+                        <td class="song" data-src="songs/128kbps/vai_passar.mp3">Vai passar</td>
+                        <td class="hide_on_mobile">Eliane Fernandes</td>
+                        <td class="tom">C</td>
+                        <td class="link"><a href="https://www.youtube.com/watch?v=oquwO18sVa4" target="_blank">Here</a></td>
+                    </tr>
+                    <tr>
+                        <td class="song" data-src="songs/128kbps/nao_ceda.mp3">Não ceda</td>
+                        <td class="hide_on_mobile">Rose Nascimento</td>
+                        <td class="tom">F</td>
+                        <td class="link"><a href="https://www.youtube.com/watch?v=oNxroCwQ03w" target="_blank">Here</a></td>
+                    </tr>
+                    <tr>
+                        <td class="song" data-src="songs/128kbps/ao_deus_do_meu_louvor.mp3">Ao Deus do meu louvor</td>
+                        <td class="hide_on_mobile">Shirley Carvalhaes</td>
+                        <td class="tom">G#</td>
+                        <td class="link"><a href="https://www.youtube.com/watch?v=ipnrNuSTE4Q" target="_blank">Here</a></td>
+                    </tr>
+                    <tr>
+                        <td class="song" data-src="songs/128kbps/ditosa_cidade.mp3">Ditosa cidade</td>
+                        <td class="hide_on_mobile">Shirley Carvalhaes</td>
+                        <td class="tom">C</td>
+                        <td class="link"><a href="https://www.youtube.com/watch?v=JUYFpuzVor8" target="_blank">Here</a></td>
+                    </tr>
+                    <tr>
+                        <td class="song" data-src="songs/128kbps/"></td>
+                        <td class="hide_on_mobile"></td>
+                        <td class="tom">?</td>
+                        <td class="link"><a href="#" target="_blank">Here</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        
+
+        
+        <div id="atos">
+            <table>       
+                <caption>NOVO ALVORECER</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col" class="hide_on_mobile">Singer</th>
+                        <th scope="col">Tone</th>
+                        <th scope="col">Youtube</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="song" data-src="songs/128kbps/">Gideão e os Trezentos</td>
+                        <td class="hide_on_mobile">Eliã Oliveira</td>
+                        <td class="tom">Bbm</td>
+                        <td class="link"><a href="https://www.youtube.com/watch?v=hFYqdNPVF4w" target="_blank">Here</a></td>
+                    </tr>
+                    <tr>
+                        <td class="song" data-src="songs/128kbps/">Pai</td>
+                        <td class="hide_on_mobile">Armando Filho</td>
+                        <td class="tom">?</td>
+                        <td class="link"><a href="https://www.youtube.com/watch?v=Alswy8YLlHI" target="_blank">Here</a></td>
+                    </tr>
+                    <tr>
+                        <td class="song" data-src="songs/128kbps/">Estou contigo</td>
+                        <td class="hide_on_mobile">Shirley Carvalhaes</td>
+                        <td class="tom">?</td>
+                        <td class="link"><a href="https://www.youtube.com/watch?v=e8YzUdvZ-3o" target="_blank">Here</a></td>
+                    </tr>
+                    <tr>
+                        <td class="song" data-src="songs/128kbps/">Porta da vitória</td>
+                        <td class="hide_on_mobile">Mirian Santos</td>
+                        <td class="tom">D</td>
+                        <td class="link"><a href="https://www.youtube.com/watch?v=XtlJpu9x47c&t=3s" target="_blank">Here</a></td>
+                    </tr>
+                    <tr>
+                        <td class="song" data-src="songs/128kbps/">Deus falou tá falado</td>
+                        <td class="hide_on_mobile">Eliã Oliveira</td>
+                        <td class="tom">C</td>
+                        <td class="link"><a href="https://www.youtube.com/watch?v=qkMDnzXCdjs" target="_blank">Here</a></td>
+                    </tr>
+                    <tr>
+                        <td class="song" data-src="songs/128kbps/">Sou eu</td>
+                        <td class="hide_on_mobile">Fabiana Anastácio</td>
+                        <td class="tom">C#m</td>
+                        <td class="link"><a href="https://www.youtube.com/watch?v=-dDOm4XGGfM" target="_blank">Here</a></td>
+                    </tr>
+                    <tr>
+                        <td class="song" data-src="songs/128kbps/">Felicidade</td>
+                        <td class="hide_on_mobile">Shirley Carvalhaes</td>
+                        <td class="tom">B</td>
+                        <td class="link"><a href="https://www.youtube.com/watch?v=HsLU9V42394" target="_blank">Here</a></td>
+                    </tr>
+                    <tr>
+                        <td class="song" data-src="songs/128kbps/">Céu</td>
+                        <td class="hide_on_mobile">Sofia Cardoso</td>
+                        <td class="tom">B</td>
+                        <td class="link"><a href="https://www.youtube.com/watch?v=lTlwU3UoU4A" target="_blank">Here</a></td>
+                    </tr>
+                    <tr>
+                        <td class="song" data-src="songs/128kbps/">Meu grito</td>
+                        <td class="hide_on_mobile">Eliã Oliveira</td>
+                        <td class="tom">G</td>
+                        <td class="link"><a href="https://www.youtube.com/watch?v=PPc8RyiK-jQ" target="_blank">Here</a></td>
+                    </tr>
+                    <tr>
+                        <td class="song" data-src="songs/128kbps/">Vendavais</td>
+                        <td class="hide_on_mobile">Shirley Carvalhaes</td>
+                        <td class="tom">Dm</td>
+                        <td class="link"><a href="https://www.youtube.com/watch?v=fg4VtLj8hhM" target="_blank">Here</a></td>
+                    </tr>
+                    <tr>
+                        <td class="song" data-src="songs/128kbps/"></td>
+                        <td class="hide_on_mobile"></td>
+                        <td class="tom"></td>
+                        <td class="link"><a href="" target="_blank">Here</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+</body>
+</html>
